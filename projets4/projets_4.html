@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blender - Projet 4</title>
+  <!-- Lien vers le CSS principal pour conserver le même style -->
+  <link rel="stylesheet" href="../style.css">
+    <style>
+  
+      .affiche-container-projet3 {
+        display: flex;
+        justify-content: center;
+        gap: 20px;  
+        margin-top: 20px;
+        flex-wrap: wrap; 
+        padding: 20px;
+      }
+  
+  
+      .affiche-card {
+        position: relative;
+        width: 400px; 
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: none;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease;
+      }
+  
+      .affiche-btn {
+        margin-top: 10px;
+        padding: 5px 15px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+      }
+  
+      .affiche-details {
+        margin-top: 10px;
+        display: none;
+        background-color: #000000;
+        padding: 10px;
+        border-radius: 5px;
+      }
+  
+      .affiche-details.show {
+        display: block;
+      }
+  
+  
+      .project-return:hover {
+        background-color: #0056b3;
+      }
+  
+    </style>
+  </head>
+  <body>
+  
+  
+    <header>
+      <div class="header-right">
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+  
+  
+  <div class="project-card">
+    <h3>Mon Jeu</h3>
+    <p>
+      Time Tempest a débuté en 2025, dans une ambiance créative et enthousiaste. Nous avons utilisé Blender pour donner vie à des scènes dynamiques et à des personnages uniques. Découvrez ci-dessous deux exemples qui reflètent parfaitement le design et le graphisme du jeu
+    </p>
+  </div>
+  
+  
+  <div class="affiche-container-projet3">
+    <div class="affiche-card">
+      <img src="../img/Blender_1.png" alt="Illustration du projet 1">
+      <button class="affiche-btn" onclick="toggleDetails(this)">Plus</button>
+      <div class="affiche-details">
+        <p>Cette image présente le design d'un personnage</p>
+      </div>
+    </div>
+    
+    <div class="affiche-card">
+      <img src="../img/Blender_2.png" alt="Illustration du projet 2">
+      <button class="affiche-btn" onclick="toggleDetails(this)">Plus</button>
+      <div class="affiche-details">
+        <p>Cette image représente un temple du temps</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <a href="../index.html" class="project-return">Retour</a>
+  
+    <script>
+  
+      function toggleDetails(button) {
+  
+        const allDetails = document.querySelectorAll('.affiche-details');
+        allDetails.forEach(detail => {
+  
+          if (detail !== button.nextElementSibling) {
+            detail.classList.remove('show');
+          }
+        });
+    
+  
+        const details = button.nextElementSibling;
+        details.classList.toggle('show');
+      }
+    </script>
+    
+  
+  
+  </body>
+  </html>
+  
+
+
+

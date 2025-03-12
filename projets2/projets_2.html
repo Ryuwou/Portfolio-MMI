@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Manga - Projet 3</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <style>
+
+    .affiche-container-projet2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .affiche-card {
+      position: relative;
+      width: 40%;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: none;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+
+    }
+    .affiche-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .affiche-btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .affiche-btn:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .affiche-details {
+      display: none;
+      margin-top: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
+      border-radius: 0 0 15px 15px;
+      box-sizing: border-box;
+    }
+    .affiche-details.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="project-card">
+    <h3>Mon Manga</h3>
+    <p>Le projet SAVE ME a été lancé en 2023, SAVE ME a été inspiré de film, de mangas. J'ai voulu explorer l'idée paradoxale que sauver quelqu'un pourrait impliquer de le perdre à chaque instant</p>
+    <p>Mon objectif est de transmettre une émotion intense et contadictoire, l'espoir et le désespoire. Dans SAVE ME on explore des ressentis comme la culpabilité,et la folie</p>
+    <p>"Et si sauver une personne signifiait devoir la tuer encore et encore ?"</p>
+  </div>
+
+
+  <div class="affiche-container-projet2">
+    <div class="affiche-card">
+      <img src="../img/Manga_1.png" alt="Illustration du manga">
+      <button class="affiche-btn" onclick="toggleDetails(this)">Plus</button>
+      <div class="affiche-details">
+        <p>Portrait de Kael</p>
+      </div>
+    </div>
+
+    <div class="affiche-card">
+      <img src="../img/Manga_2.png" alt="Deuxième illustration du manga">
+      <button class="affiche-btn" onclick="toggleDetails(this)">Plus</button>
+      <div class="affiche-details">
+        <p>Portrait de Ryuu</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="project-card">
+    <h3>SAVE ME</h3>
+   <p>Genre : Drame psychologique, Surnaturel, Thriller, Action  <p>
+    <p>Thèmes : Boucles temporelles, Folie, Culpabilité, Destin, Amitié brisée</p>
+    <p>Ryuu et Kael sont coincés dans une boucle temporelle instable, mais l’un d’eux ne s’en souvient jamais. Chaque matin, Kael se réveille avec la certitude qu’il doit fuir quelqu’un. Chaque nuit, il meurt aux mains de Ryuu. Et chaque matin, tout recommence. Ryuu, lui, se souvient de tout. Il a vécu cette boucle des milliers de fois. Il a tenté toutes les solutions : fuir avec Kael, se cacher, affronter la vérité… mais inévitablement, quelque chose les ramène à ce destin tragique. Kael est condamné à mourir, et Ryuu est condamné à être sont assasin<p>
+
+Mais pourquoi ?
+    </p>
+  </div>
+  
+  <script>
+    function toggleDetails(btn) {
+      const card = btn.closest('.affiche-card');
+      const details = card.querySelector('.affiche-details');
+      details.classList.toggle("show");
+      btn.textContent = details.classList.contains("show") ? "Moins" : "Plus";
+    }
+  </script>
+
+
+  <a href="../index.html" class="project-return">Retour</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
